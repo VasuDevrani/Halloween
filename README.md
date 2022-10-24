@@ -1,4 +1,4 @@
-# Responsive Halloween Website Built Using React 🎃🎃🎃
+# Halloween Ecommerce Website Built Using React 🎃🎃🎃
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
