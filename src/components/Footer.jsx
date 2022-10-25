@@ -1,6 +1,5 @@
 import React from "react";
-import { FaFacebook, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
-import { BiUpArrowAlt } from "react-icons/bi";
+import { FaGithub, FaInstagram } from "react-icons/fa";
 
 const index = () => {
   return (
@@ -77,9 +76,6 @@ const index = () => {
       </span>
       <img src="./img/footer1-img.png" alt="" className="footer__img-one" style={{marginRight:70}} />
       <img src="./img/footer2-img.png" alt="" className="footer__img-one" style={{marginRight:60}} />
-      <p className="scroll__up" id="scroll-up">
-        <BiUpArrowAlt className="scroll__icon" />
-      </p>
     </footer>
   );
 };

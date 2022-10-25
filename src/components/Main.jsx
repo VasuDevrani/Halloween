@@ -1,23 +1,24 @@
 import React from 'react';
-import { BiRightArrowAlt } from 'react-icons/bi';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import SwiperCore, { Pagination } from 'swiper';
+import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper';
 import sound from '../assets/ghost.mp3';
 import bell from '../assets/bell.wav';
 import witch from '../assets/witch.wav';
 
 SwiperCore.use([Pagination]);
+SwiperCore.use([Navigation]);
+SwiperCore.use([Autoplay]);
 
 const Index = () => {
 
-  function play(){
+  function play() {
     new Audio(sound).play()
   }
-  function play1(){
+  function play1() {
     new Audio(bell).play()
   }
-  function play2(){
+  function play2() {
     new Audio(witch).play()
   }
 
@@ -30,6 +31,15 @@ const Index = () => {
             pagination={{
               el: '.swiper-pagination',
               clickable: true,
+            }}
+            navigation={true}
+            loop={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false
+            }}
+            style={{
+              "--swiper-navigation-size": "25px",
             }}
           >
             <SwiperSlide>
@@ -87,7 +97,7 @@ const Index = () => {
                     discounts
                   </p>
                   <div className="home__buttons">
-                  <button className="button" onClick={play1}>
+                    <button className="button" onClick={play1}>
                       Play Music
                     </button>
                   </div>
@@ -117,7 +127,7 @@ const Index = () => {
                     In search for cute little puppy, captain Sem has come back.
                   </p>
                   <div className="home__buttons">
-                  <button className="button" onClick={play2}>
+                    <button className="button" onClick={play2}>
                       Play Music
                     </button>
                   </div>
